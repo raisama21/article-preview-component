@@ -1,0 +1,251 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+:root {
+  --clr-blue-700: hsl(217, 19%, 35%);
+  --clr-blue-500: hsl(214, 17%, 51%);
+  --clr-blue-400: hsl(212, 23%, 69%);
+  --clr-blue-300: hsl(210, 46%, 95%);
+  --base-fs: 0.8125rem;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background-color: var(--clr-blue-300);
+}
+
+main {
+  max-width: 327px;
+  min-height: 100vh;
+  display: flex;
+  margin-inline: auto;
+  align-items: center;
+}
+@media all and (min-width: 680px) {
+  main {
+    max-width: 730px;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  background-color: hsl(0deg, 0%, 100%);
+  border-radius: 0.8rem;
+}
+@media all and (min-width: 680px) {
+  .container {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+@media all and (min-width: 680px) {
+  figure {
+    min-width: 38%;
+  }
+}
+
+.main-img {
+  height: 200px;
+  min-width: 100%;
+  object-fit: fill;
+  border-top-right-radius: 0.8rem;
+  border-top-left-radius: 0.8rem;
+}
+@media all and (min-width: 680px) {
+  .main-img {
+    height: 278px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0.8rem;
+  }
+}
+
+.text {
+  padding-inline: 2rem;
+  position: relative;
+}
+.text p:last-of-type {
+  margin-block: 1rem;
+}
+@media all and (min-width: 680px) {
+  .text {
+    margin-right: 58px;
+    padding-inline: 0;
+  }
+  .text p:first-of-type {
+    font-size: 1.25rem;
+  }
+  .text p:last-of-type {
+    margin-block: 1.25rem;
+  }
+}
+
+.text p:first-of-type,
+.caption p:first-of-type {
+  color: var(--clr-blue-700);
+  font-weight: 700;
+}
+.text p:last-of-type,
+.caption p:last-of-type {
+  font-size: var(--base-fs);
+  font-weight: 500;
+  color: var(--clr-blue-500);
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+@media all and (min-width: 680px) {
+  .flex {
+    margin-right: 2.5rem;
+    padding: 0;
+  }
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatar {
+  width: 2.5rem;
+  border-radius: 50%;
+}
+
+.share-icon {
+  background-color: var(--clr-blue-300);
+  padding: 10px 9px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#share-info {
+  position: relative;
+  position: absolute;
+  transform: translate(-10%, 5%);
+}
+@media all and (min-width: 680px) {
+  #share-info {
+    display: none;
+    left: 0;
+    right: 0;
+    transform: translate(50%, -135%);
+  }
+}
+
+.hidden {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 327px;
+  padding-block: 1.25rem;
+  padding-inline: 2rem;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: var(--clr-blue-700);
+  color: var(--clr-blue-400);
+}
+@media all and (min-width: 680px) {
+  .hidden {
+    max-width: 248px;
+    margin-inline: auto;
+    padding-block: 1.25rem;
+    padding-inline: 0;
+    border-radius: 1rem;
+    justify-content: center;
+  }
+}
+
+@media all and (min-width: 680px) {
+  .hidden::before {
+    content: "";
+    display: block;
+    padding: 6px 12px;
+    background-color: var(--clr-blue-700);
+    position: absolute;
+    transform: translate(0%, 310%);
+    clip-path: polygon(50% 100%, 4% 0, 100% 0);
+  }
+}
+
+.social-icon {
+  display: flex;
+  gap: 1rem;
+  padding-left: 1.25rem;
+  cursor: pointer;
+}
+
+@media all and (min-width: 680px) {
+  #share-icon2 {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
